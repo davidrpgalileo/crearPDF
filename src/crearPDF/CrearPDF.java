@@ -36,6 +36,14 @@ public class CrearPDF {
                             BaseColor.BLUE));
             titulo.setAlignment(Chunk.ALIGN_CENTER);
             documento.add(titulo);
+            //Añadir una línea en blanco
+            documento.add(Chunk.NEWLINE);
+            //Añadir párrafos
+            documento.add(new Paragraph(
+                    "El ranking ATP es una clasificación mundial de tenistas profesionales de la Asociación "
+                    + "de Tenistas Profesionales. Se actualiza cada semana y abarca los resultados de las últimas 52 semanas. "
+                    + "Se utiliza para seleccionar a los habilitados en cada torneo y a los cabezas de serie, el máximo galardón para "
+                    + "cualquier tenista es ser considerado entre los 5 mejores del mundo en el ranking ATP."));          
             //Se cierra el documento
             documento.close();
         } catch (DocumentException ex) {
